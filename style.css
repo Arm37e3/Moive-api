@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 body{
-
+    font-family: 'Caveat', cursive;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -46,6 +47,9 @@ section{
     height: 350px;
     margin: 20px 15px;
     background-color: burlywood;
+    border-radius: 5px;
+    padding: 2px;
+
 
 
 }
@@ -53,6 +57,7 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;  
+    
 
 
 }
@@ -72,10 +77,27 @@ h2{
 .content div:hover {
     opacity: 90%;
     transform: scale(0.98);
+    cursor: pointer;
 
 }
 
 h1{
     color: aliceblue;
 
+}
+
+select {
+    margin-left: 30px;
+}
+.reting{
+
+    font-size: 30px;
+    border: 2px solid gold ;
+    border-radius: 70px;
+    width: 40px;
+    height: 40px;
+    color: azure;
+    position:absolute;
+    top: auto;
+    text-align: center;
 }

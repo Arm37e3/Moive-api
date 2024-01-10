@@ -1,6 +1,5 @@
-// const apikey = "512603a956b2aba0a6a52f5718934251";
-// const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apikey}`;
-const apikey = 'cc14d62b76a205387bd8b77c651a5e4a';
+
+const apikey = '512603a956b2aba0a6a52f5718934251';
 const content = document.getElementById('content');
 const yearSelect = document.getElementById('year');
 
@@ -18,13 +17,19 @@ const displayMovies = async (selectedYear) => {
         const mvEL = document.createElement('div');
         const title = document.createElement('h2');
         const poster = document.createElement('img');
+        const reting = document.createElement('p');
+             reting.classList.add('reting');
 
         title.innerHTML = `${M.title.substring(0, 25)}`;
+        reting.innerHTML = `${M.vote_average}`;
         poster.src = `${urlPoster}${M.poster_path}`;
 
+
         mvEL.appendChild(title);
+        mvEL.appendChild(reting);
         mvEL.appendChild(poster);
         content.appendChild(mvEL);
+   
     });
 }
 
@@ -33,7 +38,7 @@ yearSelect.addEventListener('change', async () => {
     const selectedYear = parseInt(yearSelect.value, 10);
     
     // Check if the selected year is within the allowed range (2017 to 2024)
-    if (selectedYear => 2017 && selectedYear <= 2024) {
+    if (selectedYear => 2000 && selectedYear <= 2024) {
         await displayMovies(selectedYear);
     } else {    
         alert('Please select a year between 2000 and 2024.');
@@ -45,6 +50,16 @@ const defaultYear = 2000;
 displayMovies(defaultYear);
 
 
+
+
+
+
+
+
+
+
+// const apikey = "512603a956b2aba0a6a52f5718934251";
+// const url = `https://api.themoviedb.org/3/discover/movie?api_key=${apikey}`;
 // const content = document.getElementById("content");
 // const displayMovie = async (url) => {
 
