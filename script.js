@@ -1,5 +1,5 @@
 
-const apikey = '512603a956b2aba0a6a52f5718934251';
+const apikey = '<api key>';
 const content = document.getElementById('content');
 const yearSelect = document.getElementById('year');
 
