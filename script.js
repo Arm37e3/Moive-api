@@ -1,4 +1,4 @@
-
+    
 const apikey = '<api key>';
 const content = document.getElementById('content');
 const yearSelect = document.getElementById('year');
@@ -24,6 +24,8 @@ const displayMovies = async (selectedYear) => {
         reting.innerHTML = `${M.vote_average}`;
         poster.src = `${urlPoster}${M.poster_path}`;
 
+
+        //click open ink 
         poster.addEventListener('click', async () => {
          window.open("https://youtu.be/mDa8FfZkntA?si=jZ3F8OZy_9_QxVQ4","_blank");
        });
